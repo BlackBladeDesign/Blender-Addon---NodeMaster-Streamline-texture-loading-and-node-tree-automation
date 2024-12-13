@@ -5,8 +5,8 @@
             "label": "Principled BSDF",
             "type": "ShaderNodeBsdfPrincipled",
             "location": [
-                253.06192016601562,
-                214.47003173828125
+                200.0,
+                200.0
             ],
             "inputs": [
                 [
@@ -179,8 +179,8 @@
             "label": "Material Output",
             "type": "ShaderNodeOutputMaterial",
             "location": [
-                653.0618896484375,
-                14.470030784606934
+                600.0,
+                0.0
             ],
             "inputs": [
                 [
@@ -211,12 +211,46 @@
             "outputs": []
         },
         {
+            "name": "Separate Color",
+            "label": "Separate Color",
+            "type": "ShaderNodeSeparateColor",
+            "location": [
+                -100.0,
+                -100.0
+            ],
+            "inputs": [
+                [
+                    0,
+                    "Color",
+                    "NodeSocketColor",
+                    "0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0"
+                ]
+            ],
+            "outputs": [
+                [
+                    0,
+                    "Red",
+                    "NodeSocketFloat"
+                ],
+                [
+                    1,
+                    "Green",
+                    "NodeSocketFloat"
+                ],
+                [
+                    2,
+                    "Blue",
+                    "NodeSocketFloat"
+                ]
+            ]
+        },
+        {
             "name": "Normal",
             "label": "Normal",
             "type": "ShaderNodeNormalMap",
             "location": [
-                53.061920166015625,
-                -335.52996826171875
+                0.0,
+                -350.0
             ],
             "inputs": [
                 [
@@ -241,12 +275,12 @@
             ]
         },
         {
-            "name": "Normal Map",
-            "label": "Normal Map",
+            "name": "ORM",
+            "label": "ORM",
             "type": "ShaderNodeTexImage",
             "location": [
-                -246.93807983398438,
-                -385.52996826171875
+                -400.0,
+                -100.0
             ],
             "inputs": [
                 [
@@ -268,44 +302,15 @@
                     "NodeSocketFloat"
                 ]
             ],
-            "color_space": "Non-Color"
-        },
-        {
-            "name": "NormalMap",
-            "label": "NormalMap",
-            "type": "ShaderNodeTexImage",
-            "location": [
-                -246.93807983398438,
-                -385.52996826171875
-            ],
-            "inputs": [
-                [
-                    0,
-                    "Vector",
-                    "NodeSocketVector",
-                    "0.0, 0.0, 0.0"
-                ]
-            ],
-            "outputs": [
-                [
-                    0,
-                    "Color",
-                    "NodeSocketColor"
-                ],
-                [
-                    1,
-                    "Alpha",
-                    "NodeSocketFloat"
-                ]
-            ]
+            "color_space": "sRGB"
         },
         {
             "name": "Color",
             "label": "Color",
             "type": "ShaderNodeTexImage",
             "location": [
-                -323.47088623046875,
-                386.546142578125
+                -400.0,
+                200.0
             ],
             "inputs": [
                 [
@@ -334,8 +339,8 @@
             "label": "",
             "type": "ShaderNodeGroup",
             "location": [
-                36.27996826171875,
-                82.93441009521484
+                -16.781951904296875,
+                68.4643783569336
             ],
             "inputs": [
                 [
@@ -375,46 +380,12 @@
             }
         },
         {
-            "name": "Separate Color",
-            "label": "Separate Color",
-            "type": "ShaderNodeSeparateColor",
-            "location": [
-                -100.0,
-                -100.0
-            ],
-            "inputs": [
-                [
-                    0,
-                    "Color",
-                    "NodeSocketColor",
-                    "0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0"
-                ]
-            ],
-            "outputs": [
-                [
-                    0,
-                    "Red",
-                    "NodeSocketFloat"
-                ],
-                [
-                    1,
-                    "Green",
-                    "NodeSocketFloat"
-                ],
-                [
-                    2,
-                    "Blue",
-                    "NodeSocketFloat"
-                ]
-            ]
-        },
-        {
-            "name": "ORM",
-            "label": "ORM",
+            "name": "Normal Map",
+            "label": "Normal Map",
             "type": "ShaderNodeTexImage",
             "location": [
-                -400.0,
-                -100.0
+                -317.18017578125,
+                -419.0872497558594
             ],
             "inputs": [
                 [
@@ -435,7 +406,8 @@
                     "Alpha",
                     "NodeSocketFloat"
                 ]
-            ]
+            ],
+            "color_space": "Non-Color"
         }
     ],
     "links": [
@@ -467,19 +439,19 @@
             "Normal",
             0,
             "Principled BSDF",
-            22
+            5
         ],
         [
             "Separate Color",
             2,
             "Principled BSDF",
-            6
+            1
         ],
         [
             "Separate Color",
             1,
             "Principled BSDF",
-            9
+            2
         ],
         [
             "Separate Color",
